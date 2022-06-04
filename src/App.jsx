@@ -1,9 +1,7 @@
+import Home from "./pages/Home";
+
 const App = () => {
-  return (
-    <div>
-      <p>Welcome to the e-commerce. This is a mern stact project</p>
-    </div>
-  );
+  return <Home />;
 };
 
 export default App;
