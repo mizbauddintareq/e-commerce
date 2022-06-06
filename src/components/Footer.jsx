@@ -8,9 +8,11 @@ import {
   Twitter,
 } from "@material-ui/icons";
 import styled from "styled-components";
+import { mobile } from "../Responsive";
 
 const Container = styled.div`
   display: flex;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Left = styled.div`
@@ -37,15 +39,15 @@ const SocialIcon = styled.div`
   color: white;
   background-color: #${(props) => props.color};
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-right: 20px;
-  cursor: pointer;
 `;
 
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ display: "none" })}
 `;
 
 const Title = styled.h3`
@@ -68,6 +70,7 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ backgroundColor: "#fff8f8" })}
 `;
 
 const ContactItem = styled.div`
@@ -84,7 +87,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>M-COMMERCE</Logo>
+        <Logo>LAMA.</Logo>
         <Desc>
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form, by injected
@@ -123,15 +126,14 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{ marginRight: "10px" }} /> House # 21, Block # C,
-          Kolatoli Road, Cox's Bazar 4700
+          <Room style={{ marginRight: "10px" }} /> 622 Dixie Path , South
+          Tobinchester 98336
         </ContactItem>
         <ContactItem>
-          <Phone style={{ marginRight: "10px" }} /> +880 1580541540
+          <Phone style={{ marginRight: "10px" }} /> +1 234 56 78
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{ marginRight: "10px" }} />{" "}
-          mizbauddintareq@gmail.com
+          <MailOutline style={{ marginRight: "10px" }} /> contact@lama.dev
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
